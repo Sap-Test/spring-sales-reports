@@ -6,7 +6,7 @@ import edu.wctc.salesReport.iface.SalesReport;
 import edu.wctc.salesReport.iface.ShippingPolicy;
 import edu.wctc.salesReport.implementation.DetailedSalesReport;
 import edu.wctc.salesReport.implementation.FileInput;
-import edu.wctc.salesReport.implementation.FlatRateDomesticShipping;
+import edu.wctc.salesReport.implementation.FreeShipping;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -37,7 +37,7 @@ public class MyApp {
     @Bean
     public ShippingPolicy shippingPolicy()
     {
-        return new FlatRateDomesticShipping();
+        return new FreeShipping();
     }
 
 }
